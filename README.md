@@ -1,6 +1,6 @@
 # Register and Login App :sunglasses:
 
-A simple user registration and login application built with React (frontend) and Node.js/Express (backend).
+This is a simple user registration and login application built with React (frontend) and Node.js/Express (backend).
 
 ## Features
 
