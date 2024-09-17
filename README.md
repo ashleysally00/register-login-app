@@ -1,6 +1,18 @@
 # Register and Login App :sunglasses:
 
-This is a simple user registration and login application built with React (frontend) and Node.js/Express (backend).
+## Introduction
+
+This is a simple full stack login and register app built with the following:
+- **React** (Frontend)
+- **Node.js/Express** (Backend)
+- **SQL** (Database)
+- **JavaScript**, **HTML**, and **CSS** (User Interface)
+
+### Login Page
+<img src="https://github.com/ashleysally00/register-login-app/blob/main/Login.png" alt="Login Page" width="400"/>
+
+### Signup Page
+<img src="https://github.com/ashleysally00/register-login-app/blob/main/Signup.png" alt="Signup Page" width="400"/>
 
 ## Features
 
