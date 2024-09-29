@@ -14,13 +14,27 @@ const port = process.env.PORT || 5001;
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(
+/* app.use(
   cors({
     origin: ["http://localhost:3000"],
     methods: ["POST", "GET"],
     credentials: true,
   })
+);*/
+
+//This code checks if the app is running in development or production so it then uses the correct API URL (local or Heroku).//
+
+
+app.use(
+  cors({
+    origin: process.env.NODE_ENV === 'production'
+      ? 'https://simple-register-login-7ouwcfct3-ashley-rices-projects.vercel.app'  // Production URL (Vercel)
+      : ['http://localhost:3000'],  // Development URL (local)
+    methods: ['POST', 'GET'],
+    credentials: true,
+  })
 );
+
 
 db.connect((err) => {
   if (err) {
