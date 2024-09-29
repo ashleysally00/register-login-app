@@ -29,11 +29,15 @@ app.use(
   cors({
     origin: process.env.NODE_ENV === 'production'
       ? 'https://simple-register-login-7ouwcfct3-ashley-rices-projects.vercel.app'  // Production URL (Vercel)
-      : ['http://localhost:3000'],  // Development URL (local)
-    methods: ['POST', 'GET'],
-    credentials: true,
+      : process.env.FRONTEND_URL,  // Use FRONTEND_URL from .env for local development
+    methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],  // Allow necessary methods
+    credentials: true,  // Enable credentials (cookies, etc.)
+    allowedHeaders: ['Content-Type', 'Authorization'],  // Allow necessary headers
   })
 );
+
+// Handle preflight (OPTIONS) requests globally
+app.options('*', cors());
 
 
 db.connect((err) => {
