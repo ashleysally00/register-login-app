@@ -15,8 +15,10 @@ const Login = () => {
     e.preventDefault();
     const values = { email, password };
     try {
-      const res = await axios.post("http://localhost:5001/login", values);
-      console.log("Response:", res);
+     /*  const res = await axios.post("http://localhost:5001/login", values);//
+      console.log("Response:", res);*/
+    //changed to work with Heroku for backend hosting:   
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/login`, values);
 
       if (res.data.status === "success") {
         alert("You are now logged in!");
