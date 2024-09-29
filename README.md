@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a simple full stack login and register app built with the following:
+This is a simple full stack register and login app built with the following:
 - **React** (Frontend)
 - **Node.js/Express** (Backend)
 - **SQL** (Database)
