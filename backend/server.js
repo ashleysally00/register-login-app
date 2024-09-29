@@ -22,7 +22,7 @@ app.use(cookieParser());
   })
 );*/
 
-//This code checks if the app is running in development or production so it then uses the correct API URL (local or Heroku).//
+//This code check whether the app is in development or production so it then uses the correct API URL (local or Heroku).//
 
 
 app.use(
